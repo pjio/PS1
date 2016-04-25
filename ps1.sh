@@ -16,7 +16,7 @@ PS1_exit_code_color()
         *)   echo $PS1_COLOR_RED ;;
     esac
 }
-PS1_jobs_value() { jobs | wc -l; }
+PS1_jobs_value() { jobs > /dev/null; jobs | wc -l; }
 PS1_jobs_color()
 {
     case $(PS1_jobs_value) in
